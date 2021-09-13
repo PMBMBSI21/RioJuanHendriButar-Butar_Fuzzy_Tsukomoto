@@ -22,29 +22,29 @@ public class RuleBase {
     public static void menghitungNilaiX(){
         x_produksi[0] = Math.min(Permintaan.turun(), Persediaan.banyak());
         x_produksi[0] = Math.min(x_produksi[0], Karyawan.sedikit());
+        
         x_produksi[1] = Math.min(Permintaan.turun(), Persediaan.banyak());
         x_produksi[1] = Math.min(x_produksi[1], Karyawan.banyak());
+        
         x_produksi[2] = Math.min(Permintaan.turun(), Persediaan.sedikit());
         x_produksi[2] = Math.min(x_produksi[2], Karyawan.sedikit());
+        
         x_produksi[3] = Math.min(Permintaan.turun(), Persediaan.sedikit());
         x_produksi[3] = Math.min(x_produksi[3], Karyawan.banyak());
+        
         x_produksi[4] = Math.min(Permintaan.naik(), Persediaan.banyak());
         x_produksi[4] = Math.min(x_produksi[4], Karyawan.sedikit());
+        
         x_produksi[5] = Math.min(Permintaan.naik(), Persediaan.banyak());
         x_produksi[5] = Math.min(x_produksi[5], Karyawan.banyak());
         
-        /*x_produksi[0] = Math.min(Permintaan.turun(), Persediaan.banyak());
-        x_produksi[1] = Math.min(x_produksi[0], Karyawan.sedikit());
-        x_produksi[2] = Math.min(Permintaan.turun(), Persediaan.banyak());
-        x_produksi[3] = Math.min(x_produksi[2], Karyawan.banyak());
-        x_produksi[4] = Math.min(Permintaan.turun(), Persediaan.sedikit());
-        x_produksi[5] = Math.min(x_produksi[4], Karyawan.sedikit());
-        x_produksi[6] = Math.min(Permintaan.turun(), Persediaan.sedikit());
-        x_produksi[7] = Math.min(x_produksi[6], Karyawan.banyak());
-        x_produksi[8] = Math.min(Permintaan.naik(), Persediaan.banyak());
-        x_produksi[9] = Math.min(x_produksi[8], Karyawan.sedikit());
-        x_produksi[10] = Math.min(Permintaan.naik(), Persediaan.banyak());
-        x_produksi[11] = Math.min(x_produksi[10], Karyawan.banyak());*/
+        x_produksi[6] = Math.min(Permintaan.naik(), Persediaan.sedikit());
+        x_produksi[6] = Math.min(x_produksi[6], Karyawan.sedikit());
+        
+        x_produksi[7] = Math.min(Permintaan.naik(), Persediaan.sedikit());
+        x_produksi[7] = Math.min(x_produksi[7], Karyawan.banyak());
+        
+      
     }
     
     public static void menghitungNilaiY(){
@@ -59,18 +59,11 @@ public class RuleBase {
         y_produksi[4] =Produksi.berkurang(x_produksi[4]);
 
         y_produksi[5] =Produksi.bertambah(x_produksi[5]);
-        /*y_produksi[0] =Produksi.berkurang(x_produksi[1]);
-        y_produksi[1] =Produksi.bertambah(x_produksi[1]); 
-        y_produksi[1] =Produksi.bertambah(x_produksi[3]); 
-        y_produksi[2] =Produksi.berkurang(x_produksi[2]);
-        y_produksi[2] =Produksi.berkurang(x_produksi[5]);
-        y_produksi[3] =Produksi.berkurang(x_produksi[3]);
-        y_produksi[3] =Produksi.berkurang(x_produksi[7]);
-        y_produksi[4] =Produksi.berkurang(x_produksi[4]);
-        y_produksi[4] =Produksi.berkurang(x_produksi[9]);
-        y_produksi[5] =Produksi.bertambah(x_produksi[5]);
-        y_produksi[5] =Produksi.bertambah(x_produksi[11]);*/
-
+        
+        y_produksi[6] =Produksi.berkurang(x_produksi[6]);
+        
+        y_produksi[7] =Produksi.berkurang(x_produksi[7]);
+          
     }
     
     public static double hasilProduksi() {
